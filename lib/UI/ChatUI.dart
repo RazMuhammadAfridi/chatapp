@@ -9,19 +9,26 @@ class ChatUI extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Container(
-            padding: EdgeInsets.all(20),
-            width: MediaQuery.of(context).size.width,
-            height: 100,
-            decoration: BoxDecoration(
-                border: Border.all(color: Colors.black, width: 1)),
-            child: Obx(() => Text(MessengerCtr.Message[0])),
-          )
-        ],
-      ),
-    );
+        body: Obx(() => ListView.builder(
+            itemCount: MessengerCtr.Message.length,
+            itemBuilder: (context, index) {
+              return Container(
+                margin: EdgeInsets.all(5),
+                padding: EdgeInsets.all(10),
+                width: MediaQuery.of(context).size.width * .7,
+                height: 50,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(25),
+                      bottomRight: Radius.circular(25),
+                      topLeft: Radius.circular(25)),
+                  color: Colors.deepPurpleAccent,
+                ),
+                child: Obx(() => Text(
+                      MessengerCtr.Message[index],
+                      style: TextStyle(fontSize: 20, color: Colors.white),
+                    )),
+              );
+            })));
   }
 }

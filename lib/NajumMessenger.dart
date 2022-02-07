@@ -19,7 +19,7 @@ class NajumMessenger {
         .build();
 
     connection.on('ReceiveMessage', (message) {
-      print(message.toString());
+      // print(message.toString());
       //  c.message.value = message.user
 
       c.brodcastMessage(message?[0], message?[1]);

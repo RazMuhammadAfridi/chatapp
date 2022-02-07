@@ -5,7 +5,7 @@ import 'NajumMessenger.dart';
 import 'UI/UsersListing.dart';
 import 'button.dart';
 import 'controller/MessangerController.dart';
-import 'controller/MessangerController.dart';
+
 
 class uiOne extends StatelessWidget {
   final Messenger_Ctr c = Get.put(Messenger_Ctr());

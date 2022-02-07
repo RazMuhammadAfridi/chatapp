@@ -4,8 +4,9 @@ class Messenger_Ctr extends GetxController {
   var UserName = ['Saif'].obs;
   var Message = ['hello'].obs;
 
-  brodcastMessage(String UserName, String Message) {
-    this.UserName.add(UserName);
-    this.Message.add(Message);
+  brodcastMessage(String name, String message) {
+    //  this.UserName.add(name);
+    this.Message.add(message);
+    print(Message);
   }
 }
