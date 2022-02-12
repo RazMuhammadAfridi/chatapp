@@ -1,4 +1,7 @@
+import 'package:chatapp/UI/ChatUI.dart';
+import 'package:chatapp/UI/storyView.dart';
 import 'package:chatapp/UiOne.dart';
+import 'package:chatapp/widgets/Textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +19,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         // This is the theme of your application.
         //
